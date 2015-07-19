@@ -7,10 +7,10 @@ There are some documents that indicate things that need to get fixed. (are most 
 
 A big "Thank You!" to Kawa for letting me put the code onto GitHub on my Account:
 
-Kawa's website: http://helmet.kafuka.org
-Kawa's Twitter: https://twitter.com/NoxicoDev
+Kawa's website: http://helmet.kafuka.org  
+Kawa's Twitter: https://twitter.com/NoxicoDev 
 
 
 I'm availlable on:
-Twitter: https://twitter.com/JaceCear
-GBAtemp: https://gbatemp.net/members/jaceceark1.365902/
+Twitter: https://twitter.com/JaceCear 
+GBAtemp: https://gbatemp.net/members/jaceceark1.365902/ 
