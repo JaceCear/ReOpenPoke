@@ -13,6 +13,6 @@ Kawa's website: http://helmet.kafuka.org
 Kawa's Twitter: https://twitter.com/NoxicoDev 
 
 
-I'm availlable on:
+I'm availlable on:    
 Twitter: https://twitter.com/JaceCear   
 GBAtemp: https://gbatemp.net/members/jaceceark1.365902/   
