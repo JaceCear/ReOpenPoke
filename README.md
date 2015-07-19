@@ -20,7 +20,7 @@ To Kawa for letting me put the code onto GitHub onto my account:
 
 [Kawa's website][2]
 
-[Kawa's Twitter][3]:
+[Kawa's Twitter][3]
 
   [2]: http://helmet.kafuka.org  
   [3]: https://twitter.com/NoxicoDev 
