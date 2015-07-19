@@ -1,6 +1,6 @@
-POKEFB	:= $(wildcard mon*_frnt.png) $(wildcard mon*_back.png)
-POKEPT	:= $(wildcard party-*.png)
-POKEPR	:= $(wildcard print*.png)
+POKEFB	:= $(wildcard front/mon*_frnt.png) $(wildcard back/mon*_back.png)
+POKEPT	:= $(wildcard party/party-*.png)
+POKEPR	:= $(wildcard footprints/print*.png)
 
 PNGFILES	:= $(POKEPR) $(POKEFB) $(POKEPT)
 OFILES		:= $(PNGFILES:.png=.o)
