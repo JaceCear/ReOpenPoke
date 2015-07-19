@@ -6,8 +6,9 @@ There are some documents that indicate things that need to get fixed. (are most 
 
 
 
-
-A big "Thank You!" to Kawa for letting me put the code onto GitHub onto my account:
+Thank You!
+------------------------------------------------------------------------
+To Kawa for letting me put the code onto GitHub onto my account:
 
 Kawa's website: http://helmet.kafuka.org  
 Kawa's Twitter: https://twitter.com/NoxicoDev 
