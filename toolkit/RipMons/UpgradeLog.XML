@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="RipMons">
+</Property><Property Name="Projektmappendatei" Value="C:\Users\Joca\Documents\openpoke\openpoke_newWORKS\toolkit\RipMons\RipMons.sln">
+</Property><Property Name="Benutzeroptionendatei" Value="C:\Users\Joca\Documents\openpoke\openpoke_newWORKS\toolkit\RipMons\RipMons.suo">
+</Property><Property Name="Date" Value="Samstag, 27. September 2014">
+</Property><Property Name="Time" Value="22:17">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="RipMons.sln" Description="Datei wurde erfolgreich als &quot;C:\Users\Joca\Documents\openpoke\openpoke_newWORKS\toolkit\RipMons\Backup\RipMons.sln&quot; gesichert">
+</Event><Event ErrorLevel="0" Project="" Source="RipMons.suo" Description="Datei wurde erfolgreich als &quot;C:\Users\Joca\Documents\openpoke\openpoke_newWORKS\toolkit\RipMons\Backup\RipMons.suo&quot; gesichert">
+</Event><Event ErrorLevel="0" Project="RipMons" Source="RipMons\RipMons.csproj" Description="Projektdatei erfolgreich gesichert als C:\Users\Joca\Documents\openpoke\openpoke_newWORKS\toolkit\RipMons\Backup\RipMons\RipMons.csproj">
+</Event><Event ErrorLevel="0" Project="RipMons" Source="RipMons\RipMons.csproj.user" Description="Die Projektbenutzerdatei wurde erfolgreich als &quot;C:\Users\Joca\Documents\openpoke\openpoke_newWORKS\toolkit\RipMons\Backup\RipMons\RipMons.csproj.user&quot; gesichert.">
+</Event><Event ErrorLevel="0" Project="RipMons" Source="RipMons\Program.cs" Description="Datei erfolgreich gesichert als C:\Users\Joca\Documents\openpoke\openpoke_newWORKS\toolkit\RipMons\Backup\RipMons\Program.cs">
+</Event><Event ErrorLevel="0" Project="RipMons" Source="RipMons\Properties\AssemblyInfo.cs" Description="Datei erfolgreich gesichert als C:\Users\Joca\Documents\openpoke\openpoke_newWORKS\toolkit\RipMons\Backup\RipMons\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="RipMons" Source="RipMons\RipMons.csproj" Description="Projekt erfolgreich konvertiert">
+</Event><Event ErrorLevel="3" Project="RipMons" Source="RipMons\RipMons.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="RipMons.sln" Description="Die Projektmappe wurde erfolgreich konvertiert.">
+</Event><Event ErrorLevel="3" Project="" Source="RipMons.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="RipMons" Source="RipMons\RipMons.csproj" Description="Überprüfung abgeschlossen: Upgrade der Projektdateien nicht erforderlich.">
+</Event></UpgradeLog>

@@ -1,0 +1,17 @@
+Bugs:
+July 6th, 2015
+-	When a fainted Pokémon is at the first spot
+	at the beginning of a battle, it gets switched in
+	and faints immediately. (shouldn't even be on the field)
+	[fixed July 17th]
+
+-	Some sounds don't occur when the "A-Button/Pling!" sound plays.
+
+July 9th, 2015
+-	Potion heals > 20HP during battle.
+
+July 18th, 2015
+-	In Battle, when a Pokémon reaches a level for learning
+	a new move, that move won't be taught if there already are 4 moves!
+
+July 19th, 2015

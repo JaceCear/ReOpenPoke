@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="s2wav">
+</Property><Property Name="Projektmappendatei" Value="C:\Users\Joca\Documents\openpoke\openpoke_newWORKS\toolkit\s2wav\s2wav.sln">
+</Property><Property Name="Benutzeroptionendatei" Value="C:\Users\Joca\Documents\openpoke\openpoke_newWORKS\toolkit\s2wav\s2wav.suo">
+</Property><Property Name="Date" Value="Samstag, 27. September 2014">
+</Property><Property Name="Time" Value="22:13">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="s2wav.sln" Description="Datei wurde erfolgreich als &quot;C:\Users\Joca\Documents\openpoke\openpoke_newWORKS\toolkit\s2wav\Backup\s2wav.sln&quot; gesichert">
+</Event><Event ErrorLevel="0" Project="" Source="s2wav.suo" Description="Datei wurde erfolgreich als &quot;C:\Users\Joca\Documents\openpoke\openpoke_newWORKS\toolkit\s2wav\Backup\s2wav.suo&quot; gesichert">
+</Event><Event ErrorLevel="0" Project="s2wav" Source="s2wav.csproj" Description="Projektdatei erfolgreich gesichert als C:\Users\Joca\Documents\openpoke\openpoke_newWORKS\toolkit\s2wav\Backup\s2wav.csproj">
+</Event><Event ErrorLevel="0" Project="s2wav" Source="s2wav.csproj.user" Description="Die Projektbenutzerdatei wurde erfolgreich als &quot;C:\Users\Joca\Documents\openpoke\openpoke_newWORKS\toolkit\s2wav\Backup\s2wav.csproj.user&quot; gesichert.">
+</Event><Event ErrorLevel="0" Project="s2wav" Source="Program.cs" Description="Datei erfolgreich gesichert als C:\Users\Joca\Documents\openpoke\openpoke_newWORKS\toolkit\s2wav\Backup\Program.cs">
+</Event><Event ErrorLevel="0" Project="s2wav" Source="Properties\AssemblyInfo.cs" Description="Datei erfolgreich gesichert als C:\Users\Joca\Documents\openpoke\openpoke_newWORKS\toolkit\s2wav\Backup\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="s2wav" Source="s2wav.csproj" Description="Projekt erfolgreich konvertiert">
+</Event><Event ErrorLevel="3" Project="s2wav" Source="s2wav.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="s2wav.sln" Description="Die Projektmappe wurde erfolgreich konvertiert.">
+</Event><Event ErrorLevel="3" Project="" Source="s2wav.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="s2wav" Source="s2wav.csproj" Description="Überprüfung abgeschlossen: Upgrade der Projektdateien nicht erforderlich.">
+</Event></UpgradeLog>

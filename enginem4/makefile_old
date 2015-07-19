@@ -1,0 +1,11 @@
+#
+# Change older libs/objects to EABI format
+#
+
+PATH	:= $(DEVKITARM)/change-eabi:$(PATH)
+
+FILES	:= $(wildcard *.o)
+
+build: $(FILES)
+	for obj in $^; do change-eabi $$obj; done;
+	do change-eabi obj ; done;

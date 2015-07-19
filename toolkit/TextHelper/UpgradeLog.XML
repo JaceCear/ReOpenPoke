@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="TextHelper">
+</Property><Property Name="Projektmappendatei" Value="C:\Users\Joca\Documents\openpoke\openpoke_newWORKS\toolkit\TextHelper\TextHelper.sln">
+</Property><Property Name="Benutzeroptionendatei" Value="C:\Users\Joca\Documents\openpoke\openpoke_newWORKS\toolkit\TextHelper\TextHelper.suo">
+</Property><Property Name="Date" Value="Samstag, 27. September 2014">
+</Property><Property Name="Time" Value="22:16">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="TextHelper.sln" Description="Datei wurde erfolgreich als &quot;C:\Users\Joca\Documents\openpoke\openpoke_newWORKS\toolkit\TextHelper\Backup\TextHelper.sln&quot; gesichert">
+</Event><Event ErrorLevel="0" Project="" Source="TextHelper.suo" Description="Datei wurde erfolgreich als &quot;C:\Users\Joca\Documents\openpoke\openpoke_newWORKS\toolkit\TextHelper\Backup\TextHelper.suo&quot; gesichert">
+</Event><Event ErrorLevel="0" Project="TextHelper" Source="TextHelper.csproj" Description="Projektdatei erfolgreich gesichert als C:\Users\Joca\Documents\openpoke\openpoke_newWORKS\toolkit\TextHelper\Backup\TextHelper.csproj">
+</Event><Event ErrorLevel="0" Project="TextHelper" Source="TextHelper.csproj.user" Description="Die Projektbenutzerdatei wurde erfolgreich als &quot;C:\Users\Joca\Documents\openpoke\openpoke_newWORKS\toolkit\TextHelper\Backup\TextHelper.csproj.user&quot; gesichert.">
+</Event><Event ErrorLevel="0" Project="TextHelper" Source="Form1.cs" Description="Datei erfolgreich gesichert als C:\Users\Joca\Documents\openpoke\openpoke_newWORKS\toolkit\TextHelper\Backup\Form1.cs">
+</Event><Event ErrorLevel="0" Project="TextHelper" Source="Form1.Designer.cs" Description="Datei erfolgreich gesichert als C:\Users\Joca\Documents\openpoke\openpoke_newWORKS\toolkit\TextHelper\Backup\Form1.Designer.cs">
+</Event><Event ErrorLevel="0" Project="TextHelper" Source="Program.cs" Description="Datei erfolgreich gesichert als C:\Users\Joca\Documents\openpoke\openpoke_newWORKS\toolkit\TextHelper\Backup\Program.cs">
+</Event><Event ErrorLevel="0" Project="TextHelper" Source="Properties\AssemblyInfo.cs" Description="Datei erfolgreich gesichert als C:\Users\Joca\Documents\openpoke\openpoke_newWORKS\toolkit\TextHelper\Backup\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="TextHelper" Source="Properties\Resources.Designer.cs" Description="Datei erfolgreich gesichert als C:\Users\Joca\Documents\openpoke\openpoke_newWORKS\toolkit\TextHelper\Backup\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="TextHelper" Source="Properties\Settings.Designer.cs" Description="Datei erfolgreich gesichert als C:\Users\Joca\Documents\openpoke\openpoke_newWORKS\toolkit\TextHelper\Backup\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="TextHelper" Source="Properties\Settings.settings" Description="Datei erfolgreich gesichert als C:\Users\Joca\Documents\openpoke\openpoke_newWORKS\toolkit\TextHelper\Backup\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="TextHelper" Source="Form1.resx" Description="Datei erfolgreich gesichert als C:\Users\Joca\Documents\openpoke\openpoke_newWORKS\toolkit\TextHelper\Backup\Form1.resx">
+</Event><Event ErrorLevel="0" Project="TextHelper" Source="Properties\Resources.resx" Description="Datei erfolgreich gesichert als C:\Users\Joca\Documents\openpoke\openpoke_newWORKS\toolkit\TextHelper\Backup\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="TextHelper" Source="TextHelper.csproj" Description="Projekt erfolgreich konvertiert">
+</Event><Event ErrorLevel="3" Project="TextHelper" Source="TextHelper.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="TextHelper.sln" Description="Die Projektmappe wurde erfolgreich konvertiert.">
+</Event><Event ErrorLevel="3" Project="" Source="TextHelper.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="TextHelper" Source="TextHelper.csproj" Description="Überprüfung abgeschlossen: Upgrade der Projektdateien nicht erforderlich.">
+</Event></UpgradeLog>

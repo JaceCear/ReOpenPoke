@@ -1,0 +1,177 @@
+extern const unsigned short unknown_a_frntTiles[1024];
+extern const unsigned short unknown_b_frntTiles[1024];
+extern const unsigned short unknown_c_frntTiles[1024];
+extern const unsigned short unknown_d_frntTiles[1024];
+extern const unsigned short unknown_e_frntTiles[1024];
+extern const unsigned short unknown_f_frntTiles[1024];
+extern const unsigned short unknown_g_frntTiles[1024];
+extern const unsigned short unknown_h_frntTiles[1024];
+extern const unsigned short unknown_i_frntTiles[1024];
+extern const unsigned short unknown_j_frntTiles[1024];
+extern const unsigned short unknown_k_frntTiles[1024];
+extern const unsigned short unknown_l_frntTiles[1024];
+extern const unsigned short unknown_m_frntTiles[1024];
+extern const unsigned short unknown_n_frntTiles[1024];
+extern const unsigned short unknown_o_frntTiles[1024];
+extern const unsigned short unknown_p_frntTiles[1024];
+extern const unsigned short unknown_q_frntTiles[1024];
+extern const unsigned short unknown_r_frntTiles[1024];
+extern const unsigned short unknown_s_frntTiles[1024];
+extern const unsigned short unknown_t_frntTiles[1024];
+extern const unsigned short unknown_u_frntTiles[1024];
+extern const unsigned short unknown_v_frntTiles[1024];
+extern const unsigned short unknown_w_frntTiles[1024];
+extern const unsigned short unknown_x_frntTiles[1024];
+extern const unsigned short unknown_y_frntTiles[1024];
+extern const unsigned short unknown_z_frntTiles[1024];
+extern const unsigned short unknown_question_frntTiles[1024];
+extern const unsigned short unknown_exclamation_frntTiles[1024];
+
+extern const unsigned short unknown_a_backTiles[1024];
+extern const unsigned short unknown_b_backTiles[1024];
+extern const unsigned short unknown_c_backTiles[1024];
+extern const unsigned short unknown_d_backTiles[1024];
+extern const unsigned short unknown_e_backTiles[1024];
+extern const unsigned short unknown_f_backTiles[1024];
+extern const unsigned short unknown_g_backTiles[1024];
+extern const unsigned short unknown_h_backTiles[1024];
+extern const unsigned short unknown_i_backTiles[1024];
+extern const unsigned short unknown_j_backTiles[1024];
+extern const unsigned short unknown_k_backTiles[1024];
+extern const unsigned short unknown_l_backTiles[1024];
+extern const unsigned short unknown_m_backTiles[1024];
+extern const unsigned short unknown_n_backTiles[1024];
+extern const unsigned short unknown_o_backTiles[1024];
+extern const unsigned short unknown_p_backTiles[1024];
+extern const unsigned short unknown_q_backTiles[1024];
+extern const unsigned short unknown_r_backTiles[1024];
+extern const unsigned short unknown_s_backTiles[1024];
+extern const unsigned short unknown_t_backTiles[1024];
+extern const unsigned short unknown_u_backTiles[1024];
+extern const unsigned short unknown_v_backTiles[1024];
+extern const unsigned short unknown_w_backTiles[1024];
+extern const unsigned short unknown_x_backTiles[1024];
+extern const unsigned short unknown_y_backTiles[1024];
+extern const unsigned short unknown_z_backTiles[1024];
+extern const unsigned short unknown_question_backTiles[1024];
+extern const unsigned short unknown_exclamation_backTiles[1024];
+
+extern const unsigned short unknown_a_partyTiles[146];
+extern const unsigned short unknown_b_partyTiles[146];
+extern const unsigned short unknown_c_partyTiles[146];
+extern const unsigned short unknown_d_partyTiles[146];
+extern const unsigned short unknown_e_partyTiles[146];
+extern const unsigned short unknown_f_partyTiles[146];
+extern const unsigned short unknown_g_partyTiles[146];
+extern const unsigned short unknown_h_partyTiles[146];
+extern const unsigned short unknown_i_partyTiles[146];
+extern const unsigned short unknown_j_partyTiles[146];
+extern const unsigned short unknown_k_partyTiles[146];
+extern const unsigned short unknown_l_partyTiles[146];
+extern const unsigned short unknown_m_partyTiles[146];
+extern const unsigned short unknown_n_partyTiles[146];
+extern const unsigned short unknown_o_partyTiles[146];
+extern const unsigned short unknown_p_partyTiles[146];
+extern const unsigned short unknown_q_partyTiles[146];
+extern const unsigned short unknown_r_partyTiles[146];
+extern const unsigned short unknown_s_partyTiles[146];
+extern const unsigned short unknown_t_partyTiles[146];
+extern const unsigned short unknown_u_partyTiles[146];
+extern const unsigned short unknown_v_partyTiles[146];
+extern const unsigned short unknown_w_partyTiles[146];
+extern const unsigned short unknown_x_partyTiles[146];
+extern const unsigned short unknown_y_partyTiles[146];
+extern const unsigned short unknown_z_partyTiles[146];
+extern const unsigned short unknown_question_partyTiles[146];
+extern const unsigned short unknown_exclamation_partyTiles[146];
+
+const unsigned short * const UnownFronts[] =
+{
+	unknown_b_frntTiles,
+	unknown_c_frntTiles,
+	unknown_d_frntTiles,
+	unknown_e_frntTiles,
+	unknown_f_frntTiles,
+	unknown_g_frntTiles,
+	unknown_h_frntTiles,
+	unknown_i_frntTiles,
+	unknown_j_frntTiles,
+	unknown_k_frntTiles,
+	unknown_l_frntTiles,
+	unknown_m_frntTiles,
+	unknown_n_frntTiles,
+	unknown_o_frntTiles,
+	unknown_p_frntTiles,
+	unknown_q_frntTiles,
+	unknown_r_frntTiles,
+	unknown_s_frntTiles,
+	unknown_t_frntTiles,
+	unknown_u_frntTiles,
+	unknown_v_frntTiles,
+	unknown_w_frntTiles,
+	unknown_x_frntTiles,
+	unknown_y_frntTiles,
+	unknown_z_frntTiles,
+	unknown_question_frntTiles,
+	unknown_exclamation_frntTiles,
+};
+const unsigned short * const UnownBacks[] =
+{
+	unknown_b_backTiles,
+	unknown_c_backTiles,
+	unknown_d_backTiles,
+	unknown_e_backTiles,
+	unknown_f_backTiles,
+	unknown_g_backTiles,
+	unknown_h_backTiles,
+	unknown_i_backTiles,
+	unknown_j_backTiles,
+	unknown_k_backTiles,
+	unknown_l_backTiles,
+	unknown_m_backTiles,
+	unknown_n_backTiles,
+	unknown_o_backTiles,
+	unknown_p_backTiles,
+	unknown_q_backTiles,
+	unknown_r_backTiles,
+	unknown_s_backTiles,
+	unknown_t_backTiles,
+	unknown_u_backTiles,
+	unknown_v_backTiles,
+	unknown_w_backTiles,
+	unknown_x_backTiles,
+	unknown_y_backTiles,
+	unknown_z_backTiles,
+	unknown_question_backTiles,
+	unknown_exclamation_backTiles,
+};
+const unsigned short * const UnownParty[] =
+{
+	unknown_b_partyTiles,
+	unknown_c_partyTiles,
+	unknown_d_partyTiles,
+	unknown_e_partyTiles,
+	unknown_f_partyTiles,
+	unknown_g_partyTiles,
+	unknown_h_partyTiles,
+	unknown_i_partyTiles,
+	unknown_j_partyTiles,
+	unknown_k_partyTiles,
+	unknown_l_partyTiles,
+	unknown_m_partyTiles,
+	unknown_n_partyTiles,
+	unknown_o_partyTiles,
+	unknown_p_partyTiles,
+	unknown_q_partyTiles,
+	unknown_r_partyTiles,
+	unknown_s_partyTiles,
+	unknown_t_partyTiles,
+	unknown_u_partyTiles,
+	unknown_v_partyTiles,
+	unknown_w_partyTiles,
+	unknown_x_partyTiles,
+	unknown_y_partyTiles,
+	unknown_z_partyTiles,
+	unknown_question_partyTiles,
+	unknown_exclamation_partyTiles,
+};

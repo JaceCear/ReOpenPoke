@@ -1,0 +1,54 @@
+
+Before:
+	+ Add compatibility with devkitpro's devkitARM r44
+	+ Add some comments here and there
+	+ Add scrolling in debug menu (pictures)
+	+ add Vs Dialga/Palkia theme (not in song_table though!)
+	+ add German Pokémon-Stat-Screen
+
+June 27th 2015:
+	+ Hoenn Pkmn:
+		- Sort indexes like national Dex
+		- Poképics
+		- Base stats
+		- TM/HM learnability
+
+June 28th 2015:
+	+ Hoenn Pkmn:
+		- Names (German)
+
+July 04th 2015:
+	+ data/$(LANGUAGE)/pokedata_moves.c:
+		- moved into the "data" folder
+		- added "GetRef_PokemonMoveset" function
+		- removed "const aLearnedMove* const MoveSets[]"
+		  because it's outdated
+
+	+ data/$(LANGUAGE)/itemicons.c:
+		- moved into the "data" folder
+
+	+ data/$(LANGUAGE)/partyicons.c:
+		- moved into the "data" folder
+
+	+ lang.h /lang_$(LANGUAGE).c
+		- added "const char * const MapNames[]"
+
+	+ Hoenn Pkmn:
+		- Names (English)
+
+July 05th 2015
+	+ data/pokedata_moves.c
+		- arranged moves equaling National Pokédex order
+
+July 14th 2015
+	+ translated letter in the beginning of a new game
+
+July 17th 2015
+	+ fixed fainted Pokémon not being thrown into battle
+
+July 19th 2015
+	+ lang_de-DE.c
+		- Translated some battle texts into German
+
+	+ data/pokedata_moves.c
+		- added GetAmountOfMoves function

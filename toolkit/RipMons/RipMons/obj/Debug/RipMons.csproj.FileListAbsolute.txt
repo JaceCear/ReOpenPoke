@@ -1,0 +1,8 @@
+C:\Users\Joca\Documents\openpoke\openpoke_newWORKS\toolkit\RipMons\RipMons\bin\Debug\RipMons.exe
+C:\Users\Joca\Documents\openpoke\openpoke_newWORKS\toolkit\RipMons\RipMons\bin\Debug\RipMons.pdb
+C:\Users\Joca\Documents\openpoke\openpoke_newWORKS\toolkit\RipMons\RipMons\obj\Debug\RipMons.exe
+C:\Users\Joca\Documents\openpoke\openpoke_newWORKS\toolkit\RipMons\RipMons\obj\Debug\RipMons.pdb
+D:\Emulator\GBx\openpoke\reopenPoke\toolkit\RipMons\RipMons\obj\Debug\RipMons.exe
+D:\Emulator\GBx\openpoke\reopenPoke\toolkit\RipMons\RipMons\obj\Debug\RipMons.pdb
+D:\Emulator\GBx\openpoke\reopenPoke\toolkit\RipMons\RipMons\bin\Debug\RipMons.exe
+D:\Emulator\GBx\openpoke\reopenPoke\toolkit\RipMons\RipMons\bin\Debug\RipMons.pdb

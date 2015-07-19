@@ -1,0 +1,4 @@
+C:\Users\Joca\Documents\openpoke\openpoke_newWORKS\toolkit\s2wav\bin\Debug\s2wav.exe
+C:\Users\Joca\Documents\openpoke\openpoke_newWORKS\toolkit\s2wav\bin\Debug\s2wav.pdb
+C:\Users\Joca\Documents\openpoke\openpoke_newWORKS\toolkit\s2wav\obj\Debug\s2wav.exe
+C:\Users\Joca\Documents\openpoke\openpoke_newWORKS\toolkit\s2wav\obj\Debug\s2wav.pdb

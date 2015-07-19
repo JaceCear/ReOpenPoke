@@ -1,0 +1,7 @@
+C:\Users\Joca\Documents\openpoke\openpoke_newWORKS\toolkit\TextHelper\bin\Debug\TextHelper.exe
+C:\Users\Joca\Documents\openpoke\openpoke_newWORKS\toolkit\TextHelper\bin\Debug\TextHelper.pdb
+C:\Users\Joca\Documents\openpoke\openpoke_newWORKS\toolkit\TextHelper\obj\Debug\TextHelper.Form1.resources
+C:\Users\Joca\Documents\openpoke\openpoke_newWORKS\toolkit\TextHelper\obj\Debug\TextHelper.Properties.Resources.resources
+C:\Users\Joca\Documents\openpoke\openpoke_newWORKS\toolkit\TextHelper\obj\Debug\TextHelper.csproj.GenerateResource.Cache
+C:\Users\Joca\Documents\openpoke\openpoke_newWORKS\toolkit\TextHelper\obj\Debug\TextHelper.exe
+C:\Users\Joca\Documents\openpoke\openpoke_newWORKS\toolkit\TextHelper\obj\Debug\TextHelper.pdb
