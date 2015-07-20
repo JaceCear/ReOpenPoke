@@ -58,6 +58,6 @@ const unsigned short * const PokePrints[] =
 {
 	#define DEF(x) \
 		print ## x ## Tiles,
-		#include "../pokedata_images.txt"
+		#include "../pokedata_prints.txt"
 	#undef DEF
 };
