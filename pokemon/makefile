@@ -18,11 +18,11 @@ include ../gfx_baserules
 # ---------------------------------------------------------------------
 
 $(POKEFB:.png=.s): %.s : %.png
-	$(GRIT) $< $(GRITBASE) -p -gzl
+	$(GRIT) $< $(GRITBASE) -p -gzl -o "$@"
 
 $(POKEPT:.png=.s): %.s : %.png
-	$(GRIT) $< $(GRITBASE) -p
+	$(GRIT) $< $(GRITBASE) -p -o "$@"
 
 $(POKEPR:.png=.s): %.s : %.png
-	$(GRIT) $< $(GRITBASE) -p! -gB1
+	$(GRIT) $< $(GRITBASE) -p! -gB1 -o "$@"
 
