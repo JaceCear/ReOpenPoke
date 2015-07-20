@@ -29,7 +29,6 @@ To Kawa for letting me put the code onto my GitHub account:
 
 I'm available on:
 ------------------------------------------------------------------------
-[Twitter][4]
-[GBAtemp][5]
+[Twitter][4] | [GBAtemp][5]
   [4]: https://twitter.com/JaceCear
   [5]: https://gbatemp.net/members/jaceceark1.365902/
