@@ -1,2 +1,3 @@
-# Ignore the output files if AGB project is made
-AGB/*.o
+# Ignore the output files in case
+# the project gets compiled
+*.o
