@@ -32,7 +32,7 @@
 #include "spritemanager.h"
 #include "itemmanager.h"
 #include "intro.h"
-#include "pokedex.h"
+#include "pokedex/pokedex.h"
 #include "rtc.h"
 #include "trainercard.h"
 #include "battleEngine/battle.h"
