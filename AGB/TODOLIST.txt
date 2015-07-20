@@ -2,7 +2,9 @@ List of things that need to be added respectively would be nice to be added.
 
 IMPORTANT STUFF:
 	+ fix bugs (Duh! xD)
-	+ add Pokémon-Switch in "normal" Pokémon menu
+	+ add PokÃ©mon-Switch in "normal" PokÃ©mon menu
+	+ data/partyicons.c
+		- Rearrange MonIconColors for > pkCelebi
 
 NEET STUFF:
 	+ BattleEngine/BattleEffects.c
