@@ -1,5 +1,5 @@
 # ReOpenPoke
-ReOpenPoké is a follow-up/continuation on Kawa's OpenPoké engine which itself was an attempt to rewrite Pokémon FR/LG's engine.
+ReOpenPoké is a follow-up/continuation on Kawa's OpenPoké engine which itself was an attempt to rewrite Pokémon R/S/E/**FR/LG**'s engine.
 It is in very early stages, so it has an awful lot of bugs.
 There are some documents that indicate things that need to get fixed. (are most likely going to get replaced with github's "Issues report function" [I don't know the official name atm. ^^])
 
