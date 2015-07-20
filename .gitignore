@@ -1,0 +1,2 @@
+# Ignore the output files if AGB project is made
+AGB/*.o
