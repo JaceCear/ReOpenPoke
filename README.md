@@ -16,7 +16,7 @@ How to use:
 
 Thank You!
 ------------------------------------------------------------------------
-To Kawa for letting me put the code onto GitHub onto my account:
+To Kawa for letting me put the code onto my GitHub account:
 
 [Kawa's website][2]
 
