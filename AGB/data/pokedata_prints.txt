@@ -1,5 +1,5 @@
-# Set every blank footprint to 000 and
-# delete corresponding footprint images
+// Set every blank footprint to 000 and
+// delete corresponding footprint images
 DEF(000)
 DEF(001)
 DEF(002)
