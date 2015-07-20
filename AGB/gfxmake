@@ -1,5 +1,5 @@
 
-GFXDIRS		:= cries itemicons miscgfx ow_sprites pokemon pokemon\specials tileanims tilesets trainers
+GFXDIRS		:= cries itemicons miscgfx ow_sprites pkmnSprites pkmnSprites\specials tileanims tilesets trainers
 
 .PHONY : build clean
 
