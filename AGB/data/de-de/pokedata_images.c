@@ -56,8 +56,8 @@ const unsigned short * const PokePicsShinyPal[] =
 
 const unsigned short * const PokePrints[] =
 {
-	/*#define DEF(x) \
+	#define DEF(x) \
 		print ## x ## Tiles,
 		#include "../pokedata_images.txt"
-	#undef DEF*/
+	#undef DEF
 };
