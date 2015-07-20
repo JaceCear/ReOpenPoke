@@ -9,8 +9,9 @@ How to use:
 - 1.) Download and install [devkitpro][1], if you haven't already.
 - 2.) Clone this repo to your computer.
 - 3.) Open the shell/command prompt and go to the root of ReOpenPoke.
-- 4.) Enter "make" without the "..."
-- 5.) Load the openpoke.gba ROM in an emulator.
+- 4.) Enter "makearcs.bat" without the "..."
+- 5.) Enter "make" without the "..."
+- 6.) Load the openpoke.gba ROM in an emulator.
 
   [1]: http://devkitpro.org/
 
