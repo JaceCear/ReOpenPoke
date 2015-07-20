@@ -2,7 +2,7 @@
 #ifndef __POKEDEX
 #define __POKEDEX
 
-#include "openpoke.h"
+#include "..\openpoke.h"
 
 #define REG_SEEN		0
 #define REG_CAUGHT		1

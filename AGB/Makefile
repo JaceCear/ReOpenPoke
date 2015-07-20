@@ -30,7 +30,7 @@ SFILES	:=	irq_single.s tonc_bios.s tonc_bios_sappy.s pal_blend.s		\
 		testachu.s							\
 		$(wildcard fieldmaps/*.s)
 
-CFILES	:=	main.c pokedex.c rtc.c text.c map16.c vwf.c multiplechoice.c	\
+CFILES	:=	main.c pokedex/pokedex.c rtc.c text.c map16.c vwf.c multiplechoice.c	\
 		startmenu.c trainercard.c townmap.c breeding.c			\
 		judassystem.c judascommands.c judasdata.c judasspecials.c	\
 		gear.c \
