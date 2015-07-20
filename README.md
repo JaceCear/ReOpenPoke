@@ -11,7 +11,7 @@ How to use:
 - 3.) Open the shell/command prompt and go to the root of ReOpenPoke.
 - 4.) Enter "makearcs.bat" without the "..."
 - 5.) Enter "make" without the "..."
-- 6.) Load the openpoke.gba ROM in an emulator.
+- 6.) Load the openpoke.gba ROM in an emulator of your choice.
 
   [1]: http://devkitpro.org/
 
