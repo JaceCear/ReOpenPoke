@@ -1,6 +1,6 @@
 //======================================================================
 //
-//	OpenPoké text manager
+//	OpenPokÃ© text manager
 //
 //	(comments, kudos, flames to "foo@helmetedrodent.kickassgamers.com")
 //
@@ -21,9 +21,12 @@ char DefaultTextBuffer[DTBSIZE]; //INEWRAM;
 int SetText(char *target, char *source)
 {
 	int sc = 0, tc = 0;
-	if(TextBuffer == 0) TextBuffer = (char*)&DefaultTextBuffer;
-	if(target == 0) target = TextBuffer;
-	if(target == DefaultTextBuffer) memset((char*)&DefaultTextBuffer, 0, DTBSIZE);
+	if(TextBuffer == 0)
+		TextBuffer = (char*)&DefaultTextBuffer;
+	if(target == 0)
+		target = TextBuffer;
+	if(target == DefaultTextBuffer)
+		memset((char*)&DefaultTextBuffer, 0, DTBSIZE);
 
 	while(source[sc] != 0)
 	{
@@ -32,7 +35,8 @@ int SetText(char *target, char *source)
 			sc++;
 			target += SetText(target+tc, GetTextVarPointer(source[sc])); //recursively expand
 			sc++;
-		} else
+		}
+		else
 		{
 			target[tc++] = source[sc++];
 		}
@@ -178,10 +182,10 @@ const char NameTable[2][76] =
 		'n','o','p','q','r','s','t','u','v','w','x','y','z',' ',0x91,0x92,0x93,0x94,'.',
 	},
 	{
-		'À','Á','Â','Ä','Å','È','É','Ê','Ë','Ì','Í','Î','Ï',' ','Æ','Ç','Ð','×','Ø',
-		'Ò','Ó','Ô','Õ','Ö','Ù','Ú','Û','Ü','Ý','Þ','ß','ð',' ','æ','ç','þ',0x8C,0xA1,
-		'à','á','â','ä','å','è','é','ê','ë','ì','í','î','ï',' ',0x85,0x8A,0x8B,0x9C,0x95,
-		'ò','ó','ô','õ','ö','ù','ú','û','ü','ý','þ','ß','ð',' ',' ',' ',' ',' ',' ',
+		'Ã€','Ã','Ã‚','Ã„','Ã…','Ãˆ','Ã‰','ÃŠ','Ã‹','ÃŒ','Ã','ÃŽ','Ã',' ','Ã†','Ã‡','Ã','Ã—','Ã˜',
+		'Ã’','Ã“','Ã”','Ã•','Ã–','Ã™','Ãš','Ã›','Ãœ','Ã','Ãž','ÃŸ','Ã°',' ','Ã¦','Ã§','Ã¾',0x8C,0xA1,
+		'Ã ','Ã¡','Ã¢','Ã¤','Ã¥','Ã¨','Ã©','Ãª','Ã«','Ã¬','Ã­','Ã®','Ã¯',' ',0x85,0x8A,0x8B,0x9C,0x95,
+		'Ã²','Ã³','Ã´','Ãµ','Ã¶','Ã¹','Ãº','Ã»','Ã¼','Ã½','Ã¾','ÃŸ','Ã°',' ',' ',' ',' ',' ',' ',
 	},
 };
 
@@ -349,7 +353,8 @@ void EnterName(char *target, u32 maxlen, const char *prompt, void *spritecallbac
 	{
 		DoVBlank();
 		KeyRead();
-		if(spritecallback != 0) spritecallback(spritetimer++);
+		if(spritecallback != 0)
+			spritecallback(spritetimer++);
 		OamBak[100+cursor].VPos = 57 + bob[(spritetimer >> 2) % 4];
 
 		if(Trg & START_BUTTON)
