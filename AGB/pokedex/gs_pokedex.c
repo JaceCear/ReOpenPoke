@@ -1,4 +1,4 @@
-#include "openpoke.h"
+#include "../openpoke.h"
 
 // Optional PokéDex in HGSS style
 
