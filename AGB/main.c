@@ -416,10 +416,19 @@ void StartupDebug()
 		ShowClock();
 		break;
 	case 8:		// Picture view
-		ShowPics();
 		break;
 	default:
 		break;
+	}
+	if (Mchoice == 8)
+	{
+		Mchoice = MultipleChoice(0,0,17,22,1);
+		switch(Mchoice)
+		{
+		case 0:
+			ShowPics();
+			break;
+		}
 	}
 	SoftReset();
 }

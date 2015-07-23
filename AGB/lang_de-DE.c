@@ -1024,6 +1024,7 @@ const CSTRING Choices[] =
 	"FR Import-Test",
 	"Markt",
 	"Echtzeituhr",
+	"Mehr Optionen",
 	"Bilder ansehen",
 #endif
 };
