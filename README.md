@@ -15,6 +15,10 @@ How to use:
 
   [1]: http://devkitpro.org/
 
+# Disclaimer!
+Please use an ANSI text editor / the ANSI codec when editing the files!
+If not, the umlauts/umlaute won't be shown correctly in the game!
+
 Thank You!
 ------------------------------------------------------------------------
 To Kawa for letting me put the code onto my GitHub account:
