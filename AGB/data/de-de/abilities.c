@@ -163,13 +163,13 @@ const char Abilities[][14] =
 	"Sturzbach",
 	"Hexaplaga",
 	"Steinhaupt",
-	"DÃ¼rre",
+	"Dürre",
 	"Ausweglos",
 	"Munterkeit",
 	"Pulverrauch",
 	"Mentalkraft",
 	"Panzerhaut",
-	"Energieaufladung",
+	"Energieauflad.",
 	"Klimaschutz",
 };
 
