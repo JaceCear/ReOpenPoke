@@ -1,2 +1,4 @@
 # Ignore the update batch file
+AGB/openpoke.gba
 update.bat
+*.o
