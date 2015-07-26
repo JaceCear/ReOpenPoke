@@ -1992,7 +1992,6 @@ int MultipleChoice(int left, int top, int width, int choices, int bcancel) //CHO
 			vwSetLine(left+1, 1, top+1+(c<<1), 384, 15);
 		}
 	}
-	Trg = 0;
 	//AGBPrintf("MultipleChoice: answer is %d, \"%s\" - destroying...\n",c,
 	//	(char*)choices.choices[c]);
 	ClearFrame(left, width, top, (set->NumChoices*2)+2); //(choices.numchoices*2)+2);
