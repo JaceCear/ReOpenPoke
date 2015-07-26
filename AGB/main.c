@@ -1971,18 +1971,20 @@ int MultipleChoice(int left, int top, int width, int choices, int bcancel) //CHO
 		DoVBlank();
 
 		KeyRead();
-		sndCursor();
 		if(Trg & A_BUTTON)
 		{
+			sndCursor();
 			break;
 		}
 		if(Trg & B_BUTTON && bcancel) //choices.bcancel)
 		{
+			sndCursor();
 			c = set->NumChoices; //choices.numchoices - 1;
 			break;
 		}
 		if((Trg & U_KEY) || (Trg & D_KEY))
 		{
+			sndCursor();
 			vwSetLine(left+1,1,top+1+(c<<1),448,15);
 			c = wrap(c + key_tri_vert(), 0, set->NumChoices); //choices.numchoices);
 			//AGBPrintf("MultipleChoice: cursor on %d, \"%s\".\n", c,
