@@ -452,7 +452,7 @@ Redraw:
 				{
 					sayf(SPEECH, strShopSellHowMany, items[inventory[thisitem].itemidx].name);
 					wantedct = 1;
-					DrawFrame(16, 14, 10, 4);
+					DrawFrame(16, 14, 10, 4); // Draw item counter onto screen
 					Store_WriteSellingCt(items[inventory[thisitem].itemidx].price / 2, wantedct);
 					vwSetLine(17,12,11,672,15);
 
@@ -505,6 +505,7 @@ Redraw:
 						}
 					Store_WriteSellingCt(items[inventory[thisitem].itemidx].price / 2, wantedct);
 					}
+					ClearFrame(16, 14, 10, 4); // Wipe item counter from screen
 				}
 				else
 				{
@@ -512,7 +513,7 @@ Redraw:
 				}
 				if(wantedct)
 				{
-					sayf(SPEECH,strShopSellICanPayX, items[inventory[thisitem].itemidx].price / 2);
+					sayf(SPEECH,strShopSellICanPayX, (items[inventory[thisitem].itemidx].price / 2) * wantedct);
 					if(!Inventory_MultipleChoice(21,8,8, 0,1)) //Choice_YesNo))
 					{
 						MyPlayer.cash += (items[inventory[thisitem].itemidx].price / 2) * wantedct;

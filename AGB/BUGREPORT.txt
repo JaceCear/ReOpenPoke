@@ -14,4 +14,6 @@ July 18th, 2015
 -	In Battle, when a Pokémon reaches a level for learning
 	a new move, that move won't be taught if there already are 4 moves!
 
-July 19th, 2015
+July 27th, 2015
+-	In the "PokéMart sell screen" Key-Items and PokéBalls name and amount
+	don't get printed to the screen!
