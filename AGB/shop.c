@@ -18,37 +18,40 @@ extern const unsigned short shopPal[16];
 extern const unsigned short shopTiles[528];
 extern const unsigned short shopMap[640];
 
-/*Draws the names and prices of the sold shop items*/
+// Draws the names and prices of the sold shop items onto the screen
 void Store_WriteList(u16* offeredItems, int scrolloffset, int cursor)
 {
-	#define DISPLAYED_ITEMS_AT_ONCE 6
+	#define DISPLAYED_ITEMS_AT_ONCE 6 // do not change!
 	int idx,i=0;
 	char blub[32];
 
 	vwBlackTransparentLUT();
 	for(idx = 0; idx < DISPLAYED_ITEMS_AT_ONCE; idx++)
 	{
-		// Draw any item but Cancel
+		// Draw any item but the Cancel option
 		if(offeredItems[idx+scrolloffset])
 		{
 			// Item is not affordable
 			if(items[offeredItems[idx+scrolloffset]].price > MyPlayer.cash)
 			{
+				// color item name grey
 				vwf_set_color(TEXT_INK, 3);
 				vwf_set_color(TEXT_SHADOW, 1);
 			}
 			// Item is affordable
 			else
 			{
+				// color item name black
 				vwf_set_color(TEXT_INK, 2);
 				vwf_set_color(TEXT_SHADOW, 3);
 			}
-			// Clear old name
+			// Clear old item name
 			vwWrite(128+8,(idx+3)*16,"                            ");
-			
+
 			// Write new item name
 			vwWrite(128+8,(idx+3)*16,items[offeredItems[idx+scrolloffset]].name);
 
+			// Write item's price
 			vw_SetSmall();
 			sprintf(blub,"$%4d ", items[offeredItems[idx+scrolloffset]].price);
 			vwWrite(224,(idx+3)*16,(char*)blub);
@@ -57,6 +60,7 @@ void Store_WriteList(u16* offeredItems, int scrolloffset, int cursor)
 		// Draw Cancel-Button
 		else
 		{
+			// textcolor = black
 			vwf_set_color(TEXT_INK, 2);
 			vwf_set_color(TEXT_SHADOW, 3);
 
@@ -65,8 +69,10 @@ void Store_WriteList(u16* offeredItems, int scrolloffset, int cursor)
 			vwWrite(128+8,(idx+3)*16,"                                       ");
 
 			if(i==0)
+			{
 				vwWrite(128+8,(idx+3)*16,strShopBack);
-			i++;
+				i++;
+			}
 		}
 	}
 	#undef DISPLAYED_ITEMS_AT_ONCE
@@ -74,9 +80,13 @@ void Store_WriteList(u16* offeredItems, int scrolloffset, int cursor)
 
 void Store_ShowItem(int index)
 {
+	/*icon_width * icon_height * sizeof(color) =
+			24	*		24		*		2		*/
 	int itempicbuf[0x120];
 
-	CpuFastClear(0, vwDestination, 0x1800); \
+	CpuFastClear(0, vwDestination, 0x1800);
+
+	// Draw item description to screen
 	vwWhiteTransparentLUT();
 	if(index==0)
 		vwWrite(0,3,strShopBack);
@@ -84,6 +94,7 @@ void Store_ShowItem(int index)
 		vwWrite(0,3,(char*)items[index].description);
 	vwBlackTransparentLUT();
 
+	// Copy OBJ palette
 	DmaCopy(itemicons[(index*2)+1], MEM_PAL_OBJ + 0xA0, 32);
 
 	LZ77UnCompWram((u8*)itemicons[index*2], itempicbuf);
@@ -117,10 +128,11 @@ void Store_DrawBackdrop()
 	DmaArrayCopy(shopTiles, MEM_VRAM + 0x0000);
 	DmaArrayCopy(shopPal, MEM_PAL_BG + 0x01A0);
 
-	for(ix=0;ix<640;ix++)
-		if(shopMap[ix+1]) //skip null tiles
-			BG1MAP[ix] = shopMap[ix+1] | 0xD000;
-
+	for(ix=0; ix<640; )
+	{
+		if(shopMap[++ix]) //skip null tiles
+			BG1MAP[ix-1] = shopMap[ix] | 0xD000;
+	}
 }
 
 void Store_DrawUI(int cursor)
@@ -158,25 +170,37 @@ void Store_DrawUI(int cursor)
 	OamBak[120].Priority = 0;
 }
 
-void Store_WriteWantedCt(u16* offeredItems, int wantedct, int cursor)
+/* Writes the amount and price of an item to the screen that:
+	a) is bought;
+		offeredItems != 0 (points to the sold items)
+		wantedct > 0
+		value = cursor
+	b) is sold
+		offeredItems == 0
+		wantedct < 0
+		value = price
+	Those were 2 functions earlier but to save space
+	they were merged together */
+void Store_WriteRelevantCt(u16* offeredItems, int wantedct, int value)
 {
 	char buffy[32];
+
+	if(wantedct < 0)
+		wantedct = wantedct * -1;
+
 	vwClearLine(1,36);
+
 	vw_SetSmall();
 	sprintf(buffy, "%2d", wantedct);
 	vwWrite(4,145,buffy);
-	sprintf(buffy, "$%d", items[offeredItems[cursor]].price * wantedct);
-	vwWrite(62,145,buffy);
-	vw_SetBig();
-}
-void Store_WriteSellingCt(int price, int wantedct)
-{
-	char buffy[32];
-	vwClearLine(1,36);
-	vw_SetSmall();
-	sprintf(buffy, "%2d", wantedct);
-	vwWrite(4,145,buffy);
-	sprintf(buffy, "$%d", price * wantedct);
+
+	// Write amount of items
+	sprintf(buffy,
+			"%d$",
+			(offeredItems[0] == 0) ?
+				wantedct * value
+			:	items[offeredItems[value]].price * wantedct);
+
 	vwWrite(62,145,buffy);
 	vw_SetBig();
 }
@@ -185,9 +209,9 @@ void Store_Buy(u16* offeredItems)
 {
 	int cursor = 0;
 	int scrolloffset = 0;
-	int wantedct;
+	u16 wantedct;
 
-	int i = 0;
+	u16 i = 0;
 
 	vwClear(0);
 
@@ -234,14 +258,14 @@ void Store_Buy(u16* offeredItems)
 
 				wantedct = 1;
 				DrawFrame(16, 14, 10, 4);
-				Store_WriteWantedCt(offeredItems, wantedct,cursor+scrolloffset);
+				Store_WriteRelevantCt(offeredItems, wantedct,cursor+scrolloffset);
 				vwSetLine(17,12,11,672,15);
 				i = 1;
 				while(1)
 				{
 					DoVBlank();
 					KeyRead();
-					Store_WriteWantedCt(offeredItems, wantedct,cursor+scrolloffset);
+					Store_WriteRelevantCt(offeredItems, wantedct,cursor+scrolloffset);
 					if(Trg & B_BUTTON)
 					{
 						wantedct = 0;
@@ -373,6 +397,7 @@ extern int Inventory_MultipleChoice(int left, int top, int width, int choices, i
 
 void Store_Sell()
 {
+	u16 cleanItemList[1] = {0};
 	int idx, page = 0;
 	int cursor = 0;
 	int scrolloffset = 0;
@@ -453,7 +478,7 @@ Redraw:
 					sayf(SPEECH, strShopSellHowMany, items[inventory[thisitem].itemidx].name);
 					wantedct = 1;
 					DrawFrame(16, 14, 10, 4); // Draw item counter onto screen
-					Store_WriteSellingCt(items[inventory[thisitem].itemidx].price / 2, wantedct);
+					Store_WriteRelevantCt(cleanItemList, wantedct * -1, items[inventory[thisitem].itemidx].price / 2);
 					vwSetLine(17,12,11,672,15);
 
 					// Choose how many items
@@ -503,7 +528,7 @@ Redraw:
 								wantedct = inventory[thisitem].itemcnt;
 							}
 						}
-					Store_WriteSellingCt(items[inventory[thisitem].itemidx].price / 2, wantedct);
+					Store_WriteRelevantCt(cleanItemList, wantedct * -1, items[inventory[thisitem].itemidx].price / 2);
 					}
 					ClearFrame(16, 14, 10, 4); // Wipe item counter from screen
 				}
@@ -597,29 +622,33 @@ Redraw:
 	return;
 }
 
+// Handles the store interaction
 void DoStore(u16 * offeredItems)
 {
+	// Greet the player
 	sayf(SPEECH,strShopHiThere);
+
+	// Open up the shop multipleChoiceBox
+	// until the player leaves
 	while(1)
 	{
-		switch(MultipleChoice(1,0,14,6,0)) //Choice_BuySellSeeYa))
+		switch(MultipleChoice(1,0,14,6,1)) //Choice_BuySellSeeYa))
 		{
-			case 0:
+			case 0:		// Buy
 				FadeOut();
 				Store_Buy(offeredItems);
-				FadeOut();
-				RepairMap();
 				break;
-			case 1:
+			case 1:		// Sell
 				FadeOut();
 				Store_Sell();
-				FadeOut();
-				RepairMap();
 				break;
-			case 2:
+			default:	// Good bye
 				sayf(SPEECH,strShopComeAgain);
 				return;
 		}
+		FadeOut();
+		RepairMap();
+		
 		sayf(SPEECH,strShopAnythingElse);
 	}
 }
