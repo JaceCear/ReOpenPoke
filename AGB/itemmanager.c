@@ -1176,7 +1176,7 @@ int item_Candy(u16 index, u16 special1, u16 special2, u32 param1, u32 param2)
 			}
 		}
 
-		int evoTarget = CheckEvolution(&MyParty[pk], 0, 0);
+		int evoTarget = CheckEvolution(&MyParty[pk], 0, newlevel);
 		if(evoTarget)
 		{
 			//Check!

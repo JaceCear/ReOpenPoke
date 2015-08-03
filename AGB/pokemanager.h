@@ -27,9 +27,6 @@ extern const unsigned short EggMoves[];
 // EVOLUTION
 // --------------------------------------------------------------------
 
-//They used to be stored in a pointer table, but somehow, this system works out -and- gives a binary match with the original games.
-extern const unsigned short Evolutions[];
-
 typedef enum eEvolutionTypes
 {
 	evoNull = 0, //Pokémon does not evolve at all or given slot is unused

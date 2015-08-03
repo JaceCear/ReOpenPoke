@@ -40,7 +40,7 @@ extern const unsigned short * const PokePrints[];
 void PrepareDex()
 {
 	DexList = (void*)PokeDexes[0];
-	AGBPrint("PrepareDex: PokÃ©dex reset to National mode.\n");
+	AGBPrint("PrepareDex: Pokédex reset to National mode.\n");
 }
 
 /** \brief Displays the Pokedex entry for the given species.
@@ -521,7 +521,7 @@ Redraw:
 	vwSetLine(21,7,13, 145, 15);
 	vwSetLine(20,8,15, 208, 15);
 	vwWhiteTransparentLUT();
-	vwWrite(4,129,"Â¥PICK Â¢OK Â£CANCEL Â°Â±Â²OPTIONS");
+	vwWrite(4,129,"¥PICK ¢OK £CANCEL °±²OPTIONS");
 	vwSetLine(0,20,18, 608, 15);
 	vw_SetBig();
 	vwBlackTransparentLUT();
@@ -753,13 +753,14 @@ void PokeDex_ShowData(int idx, int page, int flavorpage)
 			vwWhiteTransparentLUT();
 			vw_SetSmall();
 			if(*DexEntries[dexnum].text2 == 0)
-				vwWrite(4,129,"Â¥PICK Â¢CRY Â¦MORE");
+				vwWrite(4,129,"¥PICK ¢CRY ¦MORE");
 			else
-				vwWrite(4,129,"Â¥PICK Â¢CRY Â¦MORE Â°Â±Â²PAGE");
+				vwWrite(4,129,"¥PICK ¢CRY ¦MORE °±²PAGE");
 			vw_SetBig();
 			vwBlackTransparentLUT();
 		}
-	} else
+	}
+	else
 	{
 		data[0] = 0; //sprintf(data,"\0");
 		if(BaseStats[idx].Gender < 255)
@@ -775,35 +776,42 @@ void PokeDex_ShowData(int idx, int page, int flavorpage)
 			strcat(data,foo);
 		}
 
-		for(meh = 0; meh < 5; meh++)
+		u16* pEvos = GetEvolutions(idx);
+		u16 nrOfEvos = *pEvos++;
+
+		if(nrOfEvos)
 		{
-			switch(Evolutions[(idx*4*5)+(meh*4)])
+			for(meh = 0; meh < nrOfEvos; meh++)
 			{
-				case evoLevel:
-					sprintf(foo, strPokedexEvolvesLevel, Evolutions[(idx*4*5)+(meh*4)+1]), (char*)GetPokemonName(Evolutions[(idx*4*5)+(meh*4)+2]);
-					strcat(data, foo);
-					break;
-				case evoHappy:
-					sprintf(foo, strPokedexEvolvesHappy, (char*)GetPokemonName(Evolutions[(idx*4*5)+(meh*4)+2]));
-					strcat(data, foo);
-					break;
-				case evoItem:
-					sprintf(foo, "Evolves to %s with a %s.\n", (char*)GetPokemonName(Evolutions[(idx*4*5)+(meh*4)+2]), items[Evolutions[(idx*4*5)+(meh*4)+1]].name);
-					strcat(data, foo);
-					break;
+				switch(pEvos[(meh*4)])
+				{
+					case evoLevel:
+						sprintf(foo, strPokedexEvolvesLevel, pEvos[(meh*4)+1], (char*)GetPokemonName(pEvos[(meh*4)+2]));
+						strcat(data, foo);
+						break;
+					case evoHappy:
+						sprintf(foo, strPokedexEvolvesHappy, (char*)GetPokemonName(pEvos[(meh*4)+2]));
+						strcat(data, foo);
+						break;
+					case evoItem:
+						sprintf(foo, "Evolves to %s with a %s.\n", (char*)GetPokemonName(pEvos[(meh*4)+2]), items[pEvos[(meh*4)+1]].name);
+						strcat(data, foo);
+						break;
+				}
 			}
 		}
+
 		meh = FindDevo(idx, 1); //using depth 1 makes it return the first link.
 		if(meh != idx)
 		{
-			sprintf(foo, "Evolves from %s.\n", (char*)GetPokemonName(meh));
+			sprintf(foo, evolvesFromX, (char*)GetPokemonName(meh));
 			strcat(data, foo);
 		}
 
 		vw_SetSmall();
 		vwWrite(1,6<<3, data);
 		vwWhiteTransparentLUT();
-		vwWrite(4,129,"Â¥PICK Â¦BACK");
+		vwWrite(4,129,"¥PICK ¦BACK");
 		vw_SetBig();
 		vwBlackTransparentLUT();
 	}

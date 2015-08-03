@@ -1413,80 +1413,98 @@ unsigned int GetMonsterMainStats(aPokemon *mn, unsigned int property)
 int CheckEvolution(aPokemon * mon, int EvoTrigger, int level)
 {
 	int evo = 0;
-	int species, personal, helditem, tameness, beauty;
+
+	u8	tameness, beauty;
+	u16 helditem;
+	int personal;
+
 	int i;
 
-	species = GetMonsterStats(mon, pSpecies);
-	personal = GetMonsterStats(mon, pPersonal);
-	helditem = GetMonsterStats(mon, pHeldItem);
-	beauty = GetMonsterStats(mon, pEffortBeauty);
+	u16 species = GetMonsterStats(mon, pSpecies);
+
+	u16* pEvos = GetEvolutions(species);
+	u16 nrOfEvos = *pEvos++;
 
 	//enigma check
 
-	#define EVO_CAUSE Evolutions[(species*4*5)+(i*4)]
-	#define EVO_PARAM Evolutions[(species*4*5)+(i*4)+1]
-	#define EVO_TARGET Evolutions[(species*4*5)+(i*4)+2]
 
-	if(EvoTrigger == 0) //Triggered by level-up
+	#define EVO_CAUSE pEvos[(i*4)]
+	#define EVO_PARAM pEvos[((i*4)+1)]
+	#define EVO_TARGET pEvos[((i*4)+2)]
+
+// If "mon" has evolutions
+	if(nrOfEvos)
 	{
-		level = GetMonsterStats(mon, pLevel);
-		tameness = GetMonsterStats(mon, pTameness);
-		for(i = 0; i < 4; i++)
+		if(EvoTrigger == 0) //Triggered by level-up
 		{
-			switch(EVO_CAUSE)
+			level = GetMonsterStats(mon, pLevel);
+			tameness = GetMonsterStats(mon, pTameness);
+			for(i = 0; i < nrOfEvos; i++)
 			{
-				case evoHappy:
-					if(tameness >= 220)
-						evo = EVO_TARGET;
-					break;
-				case evoLevel:
-					if(EVO_PARAM <= level)
-						evo = EVO_TARGET;
-					break;
-				case evoAttGtDef:
-					if(EVO_PARAM <= level && GetMonsterStats(mon,pAttack)  > GetMonsterStats(mon,pDefense))
-						evo = EVO_TARGET;
-					break;
-				case evoAttEqDef:
-					if(EVO_PARAM <= level && GetMonsterStats(mon,pAttack) == GetMonsterStats(mon,pDefense))
-						evo = EVO_TARGET;
-					break;
-				case evoAttLtDef:
-					if(EVO_PARAM <= level && GetMonsterStats(mon,pAttack) <  GetMonsterStats(mon,pDefense))
-						evo = EVO_TARGET;
-					break;
-				case evoHighPers:
-					if(EVO_PARAM < level && personal % 10 <= 4) //???	Did you mean "<= level"?
-						evo = EVO_TARGET;
-					break;
-				case evoLowPers:
-					if(EVO_PARAM < level && personal % 10  > 4) //???	Did you mean "<= level"?
-						evo = EVO_TARGET;
-					break;
-				case evoAllowCreate:
-					if(EVO_PARAM <= level)
-						evo = EVO_TARGET;
-					break;
-				case evoBeauty:
-					if(EVO_PARAM < beauty)
-						evo = EVO_TARGET;
-					break;
+				switch(EVO_CAUSE)
+				{
+					case evoHappy:
+						if(tameness >= 220)
+							evo = EVO_TARGET;
+						break;
+					case evoLevel:
+						if(EVO_PARAM <= level)
+							evo = EVO_TARGET;
+						break;
+					case evoAttGtDef:
+						if(EVO_PARAM <= level && GetMonsterStats(mon,pAttack)  > GetMonsterStats(mon,pDefense))
+							evo = EVO_TARGET;
+						break;
+					case evoAttEqDef:
+						if(EVO_PARAM <= level && GetMonsterStats(mon,pAttack) == GetMonsterStats(mon,pDefense))
+							evo = EVO_TARGET;
+						break;
+					case evoAttLtDef:
+						if(EVO_PARAM <= level && GetMonsterStats(mon,pAttack) <  GetMonsterStats(mon,pDefense))
+							evo = EVO_TARGET;
+						break;
+					case evoHighPers:
+						personal = GetMonsterStats(mon, pPersonal);
+
+						if(EVO_PARAM < level && personal % 10 <= 4) //???	Did you mean "<= level"?
+							evo = EVO_TARGET;
+						break;
+					case evoLowPers:
+						personal = GetMonsterStats(mon, pPersonal);
+
+						if(EVO_PARAM < level && personal % 10  > 4) //???	Did you mean "<= level"?
+							evo = EVO_TARGET;
+						break;
+					case evoAllowCreate:
+						if(EVO_PARAM <= level)
+							evo = EVO_TARGET;
+						break;
+					case evoBeauty:
+						beauty = GetMonsterStats(mon, pEffortBeauty);
+
+						if(EVO_PARAM < beauty)
+							evo = EVO_TARGET;
+						break;
+				}
 			}
 		}
-	} else if(EvoTrigger == 1) //Triggered by trade
-	{
-		for(i = 0; i < 4; i++)
+		else if(EvoTrigger == 1) //Triggered by trade
 		{
-			if((EVO_CAUSE == evoTrade) || (EVO_CAUSE == evoItemTrade && EVO_PARAM == helditem))
-				evo = EVO_TARGET;
+			for(i = 0; i < 4; i++)
+			{
+				helditem = GetMonsterStats(mon, pHeldItem);
+				if((EVO_CAUSE == evoTrade) || (EVO_CAUSE == evoItemTrade && EVO_PARAM == helditem))
+					evo = EVO_TARGET;
+			}
 		}
-	} else if(EvoTrigger == 2) //Triggered by an item
-	{
-		for(i = 0; i < 4; i++)
+		else if(EvoTrigger == 2) //Triggered by an item
 		{
-			//if(EVO_CAUSE == EVOLUTION_ITEM && EVO_PARAM < level) //???	Are you sure?
-			if(EVO_CAUSE == evoItem && EVO_PARAM == level)
-				evo = EVO_TARGET;
+			for(i = 0; i < 4; i++)
+			{
+				//if(EVO_CAUSE == EVOLUTION_ITEM && EVO_PARAM < level) //???	Are you sure?
+				if(EVO_CAUSE == evoItem && EVO_PARAM == level)
+					evo = EVO_TARGET;
+			}
 		}
 	}
 	return evo;

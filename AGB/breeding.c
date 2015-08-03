@@ -24,19 +24,31 @@ Can't have any higher values than 1.
 */
 int FindDevo(int targetSpecies, int depth)
 {
-	int i, j;
-	for(i=1; i < pkTotal; i++)
+	int scrollCounter, evoIndex;
+
+	// Scroll through every Pokémon's evolutions,
+	// check whether it evolves into the target
+	for(scrollCounter=1; scrollCounter <= pkTotal; scrollCounter++)
 	{
-		for(j = 0; j < 5; j++)
+		u16* pEvos = GetEvolutions(scrollCounter);
+		u16 nrOfEvos = *pEvos++;
+
+		if(nrOfEvos)
 		{
-			if(Evolutions[(i*4*5)+(j*4)+2] == targetSpecies)
+			// Check whether any of "scrollCounter"'s evos
+			// is "targetSpecies"
+			for(evoIndex = 0; evoIndex < nrOfEvos; evoIndex++)
 			{
-				if(depth == 0)
+				if(pEvos[(evoIndex*4)+2] == targetSpecies)
 				{
-					return FindDevo(i, 1);
-				} else
-				{
-					return i;
+					if(depth == 0)
+					{
+						return FindDevo(scrollCounter, 1);
+					}
+					else
+					{
+						return scrollCounter;
+					}
 				}
 			}
 		}
@@ -49,12 +61,14 @@ int GetEggMoves(int species, unsigned short * list)
 	int ii, ct;
 	for(ii = 0; ii < pkTotal; ii++)
 	{
-		if(EggMoves[ii] == species + 20000) break;
+		if(EggMoves[ii] == species + 20000)
+			break;
 	}
 	ii++;
 	for(ct = 0; ct < 9; ct++)
 	{
-		if(EggMoves[ii+ct] > 20000) break;
+		if(EggMoves[ii+ct] > 20000)
+			break;
 		list[ct] = EggMoves[ii+ct];
 	}
 	return ct;
@@ -67,7 +81,8 @@ int GetGender(int species, int pv)
 		if((u8)pv > BaseStats[species].Gender)
 		{
 			return 0;
-		} else
+		}
+		else
 		{
 			return 1;
 		}
