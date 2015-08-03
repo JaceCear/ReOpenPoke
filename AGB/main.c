@@ -374,8 +374,11 @@ void StartupDebug()
 		return;
 	case 2:		// Wild battle
 		CheckNoSave();
-		CreateMonster(&MyParty[0],pkDitto,10);
-		CreateMonster(&HisParty[0],rrand(pkTotal),5);
+		CreateMonster(&MyParty[0],pkBulbasaur,15);
+		GiveItem(itemThunderStone);//, 99);
+		if(	GetPartySize(&MyParty) < 6)
+			CreateMonster(&MyParty[2], pkDeoxys, 2);
+		CreateMonster(&HisParty[0],pkMetapod,20);
 		//CreateMonsterInParty(25,20);
 		//CreateMonster(&MyParty[1],pkTURRET,10);
 		//CreateMonster(&HisParty[0],pkSKITTY,20);
@@ -427,6 +430,9 @@ void StartupDebug()
 		{
 		case 0:
 			ShowPics();
+			break;
+		case 1:
+			openPokeDex();
 			break;
 		}
 	}

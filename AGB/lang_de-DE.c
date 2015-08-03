@@ -1026,6 +1026,7 @@ const CSTRING Choices[] =
 	"Echtzeituhr",
 	"Mehr Optionen",
 	"Bilder ansehen",
+	"PokéDex",
 #endif
 };
 

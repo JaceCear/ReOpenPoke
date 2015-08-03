@@ -30,7 +30,7 @@ const int Choices_PartyItems[] = { 6, 43, 0 }; //Give, Take, Cancel
 const int Choices_BoyGirl[] = { 44, 45 }; //Boy, Girl
 #ifdef DEBUG
 const int Choices_DebugMenu1[] = { 46, 47, 48, 49, 50, 51, 52, 53, 54 };
-const int Choices_DebugMenu2[] = { 55,  0,  0,  0,  0,  0,  0,  0,  0 };
+const int Choices_DebugMenu2[] = { 55, 56,  0,  0,  0,  0,  0,  0,  0 };
 #endif //DEBUG
 
 
