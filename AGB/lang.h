@@ -118,6 +118,7 @@ extern const char * const strPokedexAlwaysFemale;
 extern const char * const strPokedexChanceOfFemale;
 extern const char * const strPokedexEvolvesLevel;
 extern const char * const strPokedexEvolvesHappy;
+extern const char * const strPokedexEvolvesFromX;
 
 extern const char * const StartMenuHelpStrings[];
 extern const char * const strSafariStatBalls;

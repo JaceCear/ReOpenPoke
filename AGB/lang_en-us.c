@@ -497,6 +497,7 @@ const CSTRING strPokedexAlwaysFemale = "always female\n";
 const CSTRING strPokedexChanceOfFemale = "%d%% chance of female\n";
 const CSTRING strPokedexEvolvesLevel = "Evolves to %s at level %d.\n";
 const CSTRING strPokedexEvolvesHappy = "Evolves to %s when happy enough.\n";
+const CSTRING strPokedexEvolvesFromX = "Evolution of %s\n";
 
 //Descriptions of the start menu items
 const CSTRING StartMenuHelpStrings[] =
