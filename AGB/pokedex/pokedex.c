@@ -804,7 +804,7 @@ void PokeDex_ShowData(int idx, int page, int flavorpage)
 		meh = FindDevo(idx, 1); //using depth 1 makes it return the first link.
 		if(meh != idx)
 		{
-			sprintf(foo, evolvesFromX, (char*)GetPokemonName(meh));
+			sprintf(foo, strEvolvesFromX, (char*)GetPokemonName(meh));
 			strcat(data, foo);
 		}
 
