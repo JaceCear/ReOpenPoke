@@ -17,7 +17,7 @@ How to use:
 
 # Disclaimer!
 Please use an ANSI text editor / the ANSI codec when editing the files!
-If not, the umlauts/umlaute won't be shown correctly in the game!
+If not, the umlauts and other "special" characters won't be shown correctly in the game!
 
 Thank You!
 ------------------------------------------------------------------------
