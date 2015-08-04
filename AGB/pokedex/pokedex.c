@@ -40,7 +40,7 @@ extern const unsigned short * const PokePrints[];
 void PrepareDex()
 {
 	DexList = (void*)PokeDexes[0];
-	AGBPrint("PrepareDex: Pokédex reset to National mode.\n");
+	AGBPrint("PrepareDex: Pok�dex reset to National mode.\n");
 }
 
 /** \brief Displays the Pokedex entry for the given species.
@@ -340,7 +340,7 @@ void PokeSearchDrawStuff(int cursor, int dexid, int sort, int letter, int color,
 
 	vwWhiteTransparentLUT();
 	vw_SetSmall();
-	vwWrite(4,129,"Â¥MOVE Â¦CHANGE Â¢OK Â£BACK");
+	vwWrite(4,129,"¥MOVE ¦CHANGE ¢OK £BACK");
 	vwSetLine(0,20,18, 608, 15);
 	vw_SetBig();
 	vwBlackTransparentLUT();
@@ -449,7 +449,7 @@ void PokeSearch()
 				}
 				FilteredDex[0] = j;
 				DexList = (void*)FilteredDex;
-				AGBPrint("PokeSearch: PokÃ©dex set to Filtered mode.\n");
+				AGBPrint("PokeSearch: Pokédex set to Filtered mode.\n");
 				return;
 			} else
 			{
@@ -472,7 +472,7 @@ void PokeSearch()
 				} else
 				{
 					DexList = (void*)PokeDexes[dexid];
-					AGBPrintf("PokeSearch: PokÃ©dex set to #%d.\n",dexid);
+					AGBPrintf("PokeSearch: Pokédex set to #%d.\n",dexid);
 				}
 				return;
 			}
@@ -521,7 +521,7 @@ Redraw:
 	vwSetLine(21,7,13, 145, 15);
 	vwSetLine(20,8,15, 208, 15);
 	vwWhiteTransparentLUT();
-	vwWrite(4,129,"¥PICK ¢OK £CANCEL °±²OPTIONS");
+	vwWrite(4,129,"�PICK �OK �CANCEL ���OPTIONS");
 	vwSetLine(0,20,18, 608, 15);
 	vw_SetBig();
 	vwBlackTransparentLUT();
@@ -753,9 +753,9 @@ void PokeDex_ShowData(int idx, int page, int flavorpage)
 			vwWhiteTransparentLUT();
 			vw_SetSmall();
 			if(*DexEntries[dexnum].text2 == 0)
-				vwWrite(4,129,"¥PICK ¢CRY ¦MORE");
+				vwWrite(4,129,"�PICK �CRY �MORE");
 			else
-				vwWrite(4,129,"¥PICK ¢CRY ¦MORE °±²PAGE");
+				vwWrite(4,129,"�PICK �CRY �MORE ���PAGE");
 			vw_SetBig();
 			vwBlackTransparentLUT();
 		}
@@ -811,7 +811,7 @@ void PokeDex_ShowData(int idx, int page, int flavorpage)
 		vw_SetSmall();
 		vwWrite(1,6<<3, data);
 		vwWhiteTransparentLUT();
-		vwWrite(4,129,"¥PICK ¦BACK");
+		vwWrite(4,129,"�PICK �BACK");
 		vw_SetBig();
 		vwBlackTransparentLUT();
 	}
@@ -926,7 +926,7 @@ void ShowNewlyCaught(u16 index)
 	}
 }
 
-/** \brief Registers a given PokÃ©mon as seen.
+/** \brief Registers a given Pokémon as seen.
 
 		Can also mark as seen and caught, and calls ShowNewlyCaught depending on the given flags.
 */
