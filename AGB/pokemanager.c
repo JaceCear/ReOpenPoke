@@ -1512,7 +1512,7 @@ int CheckEvolution(aPokemon * mon, int EvoTrigger, int level)
 
 int LearnMove(aPokemon * victim, int move, int slot)
 {
-	SetMonsterStats(&MyParty[2], pMove1 + slot, move);
-	SetMonsterStats(&MyParty[2], pPP1 + slot, moves[move].pp);
+	SetMonsterStats(victim, pMove1 + slot, move);
+	SetMonsterStats(victim, pPP1 + slot, moves[move].pp);
 	return 1;
 }
