@@ -1165,9 +1165,11 @@ int item_Candy(u16 index, u16 special1, u16 special2, u32 param1, u32 param2)
 		int l;
 		for(l = 0; l < 100; l++)
 		{
-			if(moveset[l].Move == 0x1FF) break;
+			if(moveset[l].Move == 0x1FF)
+				break;
 			//sayf(SYSTEM, "Moveset check.\n%s @ %d?", moveNames[moveset[l].Move], moveset[l].Level);
-			if((moveset[l].Level <= newlevel) && (moveset[l].Level > curlevel))
+			if(	(moveset[l].Level <= newlevel) &&
+				(moveset[l].Level > curlevel))
 			{
 				FadeOut();
 				int slot = SelectLearnMove(&MyParty[pk],moveset[l].Move);
@@ -1178,7 +1180,8 @@ int item_Candy(u16 index, u16 special1, u16 special2, u32 param1, u32 param2)
 					AGBPrintf("Teaching move %d...\n");
 					LearnMove(&MyParty[pk], moveset[l].Move, slot);
 				}
-			} else if(moveset[l].Level > newlevel)
+			}
+			else if(moveset[l].Level > newlevel)
 			{
 				//break;
 			}
