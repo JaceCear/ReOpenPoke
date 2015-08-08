@@ -778,7 +778,8 @@ void UseRegisteredItem()
 				FadeIn();
 			}
 		}
-	} else
+	}
+	else
 	{
 		sayf(SYSTEM, strNoRegisteredItem);
 	}
@@ -1033,12 +1034,16 @@ int item_Heal(u16 index, u16 special1, u16 special2, u32 param1, u32 param2)
 	int pk = ShowParty(psmSelectOnly, 0);
 	if(pk != -1)
 	{
-		if(special2) //Potion-likes
+		//Potion-like items
+		if(special2)
 		{
 			int amount = clamp(	MyParty[pk].Status.CurrentHP + special2, 0,
 								MyParty[pk].Status.TotalHP - MyParty[pk].Status.CurrentHP+1);
+			// Only heal up as much as the item's "healing value"
+			if (amount > special2)
+				amount = special2;
 			int oldAmount = amount;
-			if(amount == 0)
+			if(amount == 0 || MyParty[pk].Status.CurrentHP == 0)
 			{
 				sayf(SYSTEM, strItemHasNoEffect);
 				return IR_FADE;
@@ -1068,10 +1073,13 @@ int item_BtlHeal(u16 index, u16 special1, u16 special2, u32 param1, u32 param2)
 	{
 		if(special2) //Potion-likes
 		{
-			int amount = clamp(MyParty[pk].Status.CurrentHP + special2, 0,
-												 MyParty[pk].Status.TotalHP - MyParty[pk].Status.CurrentHP + 1);
+			int amount = clamp(	MyParty[pk].Status.CurrentHP + special2, 0,
+								MyParty[pk].Status.TotalHP - MyParty[pk].Status.CurrentHP + 1);
+			// Only heal up as much as the item's "healing value"
+			if (amount > special2)
+				amount = special2;
 			int oldAmount = amount;
-			if(amount == 0)
+			if(amount == 0 || MyParty[pk].Status.CurrentHP == 0)
 			{
 				sayf(SYSTEM, strItemHasNoEffect);
 				return IR_FADE;
